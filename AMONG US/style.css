@@ -1,0 +1,112 @@
+:root {
+    --principal:#2c198d;
+    --sobra:#6b30bc;
+    --fondo:#ffd31f;
+    --borde:10px solid black;
+    --gafas:#465c68;
+    --gafas-sombra:#93c1d4;
+    --reflejo:#f4f5ee;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--fondo);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.jugador::after, .piernas, .piernas::before, .piernas::after, .maleta, .maleta::after, .gafas, .gafas::before, .gafas::after{
+    content: "";
+    position: absolute;
+}
+.jugador {
+    position: relative;
+    width: 140px;
+    height: 200px;
+    background-color: var(--principal);
+    border: var(--borde);
+    border-bottom: none;
+    border-radius: 60px 80px 0 0;
+    z-index: 1;
+}
+.jugador::after {
+    width: 110px;
+    height: 160px;
+    background-color: var(--sobra);
+    left: 6px;
+    border-radius: 58% 70% 28% 42% / 28% 56% 88% 89%;
+}
+.piernas{
+    width: 62px;
+    height: 50px;
+    background-color: var(--principal);
+    top: 183px;
+    left: -10px;
+    border:var(--borde);
+    border-top: none;
+    border-radius: 0 0 22px 22px;
+}
+.piernas::before{
+    width: 40px;
+    height: 41px;
+    background-color: var(--principal);
+    position: absolute;
+    left: 71.5px;
+    border:var(--borde);
+    border-top: none;
+    border-radius: 0 0 22px 22px;
+}
+.piernas::after{
+    height: 10px;
+    width: 50px;
+    background-color: black;
+    border-radius: 0 0 10px 0;
+    left: 43px;
+}
+.maleta{
+    width: 33px;
+    height: 108px;
+    background-color: var(--sobra);
+    left: -42px;
+    top: 50px;
+    border: var(--borde);
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+}
+.maleta::after{
+    top: 18.8px;
+    width: 24px;
+    height: 70px;
+    background-color: var(--principal);
+    border-radius: 5px 0 0 8px;
+}
+.gafas{
+    width: 110px;
+    height: 75px;
+    background-color: var(--gafas);
+    z-index: 2;
+    border-radius: 25px 50px 30px 30px;
+    top: 24px;
+    left: 34px;
+    border: var(--borde);
+}
+.gafas::before{
+    width: 70px;
+    height: 40px;
+    background-color: var(--gafas-sombra);
+    left: 20px;
+    border-radius: 0 28px 3px 30px;
+}
+.gafas::after{
+    width: 35px;
+    height: 10px;
+    background-color: var(--reflejo);
+    border-radius: 10px;
+    left: 45px;
+    top: 4px;
+    rotate: 6deg;
+}
