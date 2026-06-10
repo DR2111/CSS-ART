@@ -1,0 +1,42 @@
+:root {
+    --piel:#ebc9a1;
+    --gorro:#38b4b7;
+    --gorro_bordes:#f7f212;
+    --ojos:#f3f1f2;
+    --puntos:#090708;
+    --fondo:#d6d6d6;
+}
+*{
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.cabeza {
+    position: relative;
+    width: 250px;
+    height: 200px;
+
+}
+.piel{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--piel);
+    border-radius: 50%;
+    z-index: 2;
+}
+.cabeza_gorro {
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    background-color: var(--gorro);
+    border-radius: 150px 150px 20px 20px;
+    top: -50px;
+    z-index: 1;
+}
